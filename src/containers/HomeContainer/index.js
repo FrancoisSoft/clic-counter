@@ -5,11 +5,11 @@ import { createStructuredSelector } from 'reselect';
 
 import Home from '../../views/Home';
 import { makeSelectHomeContainerCounter } from './selector';
-import { incrementAction } from './action';
-import { decrementAction } from './action';
+import { incrementAction } from '../CounterContainer/action';
+import { decrementAction } from '../CounterContainer/action';
 import { useInjectReducer } from '../../utils/injectReducer';
 
-import reducer from './reducer';
+import reducer from '../CounterContainer/reducer';
 
 const key = 'homeContainer';
 
