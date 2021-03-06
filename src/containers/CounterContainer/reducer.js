@@ -13,10 +13,17 @@ export default function homeContainerReducer(state = initialState, action) {
         counter: state.counter + 1,
       };
       case DECREMENT:
-            return {
-              ...state,
-              counter: state.counter - 1,
-            };
+        if(state.counter > 0){
+          return {
+            ...state,
+            counter: state.counter - 1,
+          };
+        }
+        else{
+          return{
+            ...state
+          };
+        }
     default:
       return state;
   }
